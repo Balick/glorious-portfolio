@@ -3,6 +3,7 @@ import { ubuntu } from "@/data/constants/fonts";
 import profileImg from "@/public/profile.jpg";
 import { TypewriterEffect } from "./ui/typewritet-effect";
 import { color } from "framer-motion";
+import { FlipWords } from "./ui/flip-words";
 
 export default function HeroSection() {
   return (
@@ -10,18 +11,30 @@ export default function HeroSection() {
       <div className="rounded-full overflow-hidden w-32 h-32">
         <Image src={profileImg} alt="profile photo" />
       </div>
-      <h2 className={`font-semibold text-lg`}>Hi, I&apos;m Balick 🤗</h2>
+      <h2 className={`font-semibold text-lg`}>Hi, I&apos;m Glorious 🤗</h2>
       <h1
         className={`${ubuntu.className} font-bold text-3xl md:text-5xl flex flex-col`}
       >
-        <span>Building digital</span>
-        <span>products, brands, and</span>
-        <span>experiences.</span>
+        <span>From Design to Development,</span>
+        <span>
+          <span className="text-yellow-500">I Craft Exceptional</span> <br />
+          <FlipWords
+            words={[
+              "Web Experiences",
+              "Impactful Experiences",
+              "Scalable Solutions",
+              "Interactive Experiences",
+              "User-Centric Solutions",
+            ]}
+            className="dark:text-yellow-700 text-amber-600"
+          />
+          .
+        </span>
       </h1>
       <p className="lg:text-md dark:text-slate-300">
-        a <b>Product Designer</b> and <b>Visual Developper</b> in SF. <br />I
-        specialized in UI/UX Design, Responsive Web Design,{" "}
-        <br className="hidden sm:block" /> and Visual Developement.
+        Leveraging my expertise in both <b>front-end</b> <br /> and{" "}
+        <b>back-end</b> development, I bring ideas to life, <br /> crafting
+        seamless user experiences and robust functionality
       </p>
       <a
         href=""
