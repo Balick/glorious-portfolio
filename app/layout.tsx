@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter } from "@/data/constants/fonts";
+import { ToggleButton } from "@/components/toggle-theme";
 
 export const metadata: Metadata = {
   title: "Balick's portfolio",
@@ -18,13 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased overflow-x-hidden`}>
+      <body className={`${inter.className} antialiased overflow-x-hidden dark:bg-cool-black relative`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+          <ToggleButton />
           {children}
         </ThemeProvider>
       </body>
