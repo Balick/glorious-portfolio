@@ -16,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased overflow-x-hidden dark:bg-cool-black relative`}>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${inter.className} antialiased overflow-x-hidden dark:bg-cool-black relative`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -1,5 +1,6 @@
 import Citation from "@/components/citation-section";
 import HeroSection from "@/components/hero-section";
+import Services from "@/components/services";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Meteors } from "@/components/ui/meteors";
 import { navItems } from "@/data";
@@ -11,6 +12,7 @@ export default function Home() {
       <FloatingNav navItems={navItems} />
       <HeroSection />
       <Citation />
+      <Services />
     </main>
   );
 }
