@@ -2,8 +2,9 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
+import { Button } from "./moving-border";
+import { Span } from "next/dist/trace/trace.js";
 
 export const HoverEffect = ({
   items,
@@ -12,6 +13,7 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
+    ico?: ReactNode;
   }[];
   className?: string;
 }) => {
@@ -28,7 +30,7 @@ export const HoverEffect = ({
         <div
           //href={item?.link}
           key={item?.title}
-          className="relative group  block p-2 h-full w-full"
+          className="relative group  block p-2 h-max w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -50,6 +52,7 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
+            {item.ico && <span className="block dark:bg-yellow-500/25 bg-amber-500/25 w-max p-2 rounded-xl">{item.ico}</span>}
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
@@ -67,18 +70,21 @@ export const Card = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div
+    <Button
+      duration={Math.floor(Math.random() * 10000) + 10000}
+      borderRadius="1.75rem"
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-cool-black border border-transparent border-black group-hover:border-slate-700 dark:border-white/[0.2] dark:group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 bg-white dark:bg-cool-black border border-black/10 group-hover:border-slate-700 dark:border-white/[0.2] dark:group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>
-    </div>
+    </Button>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -87,11 +93,10 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("font-bold tracking-wide mt-4", className)}>
-      {children}
-    </h4>
+    <h4 className={cn("font-bold tracking-wide text-left mt-2", className)}>{children}</h4>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
@@ -102,7 +107,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 dark:text-zinc-300 tracking-wide leading-relaxed text-sm",
+        "mt-4 dark:text-zinc-300 tracking-wide leading-relaxed text-sm text-left",
         className
       )}
     >

@@ -3,7 +3,7 @@ import HeroSection from "@/components/hero-section";
 import Services from "@/components/services";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Meteors } from "@/components/ui/meteors";
-import { navItems } from "@/data";
+import { navItems } from "@/data/index";
 
 export default function Home() {
   return (
