@@ -57,3 +57,47 @@ export const services = [
       "Bridge the gap between design and development, ensuring pixel-perfect implementation. Maintain design fidelity throughout the development process",
   },
 ];
+
+export const works = [
+  {
+    title: "Glorious Portfolio",
+    description:
+      "A simple and beautiful portfolio to present Théo Balick's work and career.",
+    className: "md:col-span-1",
+    image: "/images/works/work1.png",
+  },
+  {
+    title: "Esis Social Website",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente, voluptatum dolores deserunt repellat minus aspernatur facere aspe",
+    className: "md:col-span-1",
+    image: "/images/works/work7.png",
+  },
+  {
+    title: "Adrian's Portfolio",
+    description: "Modern & Minimal JS Mastery Portfolio",
+    className: "md:col-span-1",
+    image: "/images/works/work4.png",
+  },
+  {
+    title: "Iceberg Investment",
+    description:
+      "Your partner for integrating IT solutions, developing business management applications and much more. We offer state-of-the-art IT services, tax advice, construction, electrical, plumbing and painting services, as well as the supply of hardware, office products, clothing, perfumery, jewellery and many other items.",
+    className: "md:col-span-1",
+    image: "/images/works/work3.png",
+  },
+  {
+    title: "Venissa's Portfolio",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente, voluptatum dolores deserunt repellat minus aspernatur facere aspe",
+    className: "md:col-span-2",
+    image: "/images/works/work6.png",
+  },
+  {
+    title: "Tailus UI React",
+    description:
+      "Highly customizable components for crafting modern, personalized websites and applications.",
+    className: "md:col-span-1",
+    image: "/images/works/work5.png",
+  },
+];

@@ -3,6 +3,7 @@ import HeroSection from "@/components/hero-section";
 import Services from "@/components/services";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Meteors } from "@/components/ui/meteors";
+import Works from "@/components/works-section";
 import { navItems } from "@/data/index";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <Citation />
       <Services />
+      <Works />
     </main>
   );
 }

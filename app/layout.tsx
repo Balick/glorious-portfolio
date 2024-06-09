@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.className} antialiased overflow-x-hidden dark:bg-cool-black relative`}
+        className={`${inter.className} antialiased overflow-x-hidden bg-[#f8f8f8] dark:bg-cool-black relative`}
       >
         <ThemeProvider
           attribute="class"
