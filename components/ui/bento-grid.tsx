@@ -26,11 +26,13 @@ export const BentoGridItem = ({
   title,
   description,
   image,
+  link,
 }: {
   className?: string;
   title: string;
   description: string;
   image: string;
+  link: string;
 }) => {
   return (
     <div
@@ -60,7 +62,7 @@ export const BentoGridItem = ({
             : description}
         </div>
         <a
-          href="/"
+          href={link}
           target="_blank"
           className="flex gap-2 items-center text-amber-600 dark:text-yellow-500 font-semibold mt-2"
         >

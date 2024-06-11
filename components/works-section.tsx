@@ -23,6 +23,7 @@ export default function Works() {
           <BentoGridItem
             key={i}
             title={item.title}
+            link={item.link}
             description={item.description}
             image={item.image}
             className={cn("md:col-span-1")}

@@ -21,7 +21,7 @@ export default function Footer() {
           </p>
           <a
             href="mailto:balickmethens@gmail.com"
-            className="uppercase font-semibold text-xs bg-cool-black dark:bg-white dark:text-black text-white rounded-full px-8 py-4 flex items-center justify-center gap-2"
+            className="uppercase font-semibold text-xs bg-cool-black dark:bg-white dark:text-black text-white rounded-full px-8 py-4 flex items-center justify-center gap-2 hover:scale-105 active:scale-100 transition-all duration-300"
           >
             <span>Let&apos;s get in touch</span>
             <FaLocationArrow />
@@ -36,6 +36,8 @@ export default function Footer() {
             {socialMedia.map((info) => (
               <a
                 key={info.id}
+                href={info.href}
+                target="_blank"
                 className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 bg-amber-50 hover:bg-amber-100 dark:hover:text-yellow-500 transition-all duration-300 dark:bg-inherit"
               >
                 {info.img}

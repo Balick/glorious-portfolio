@@ -38,10 +38,10 @@ export default function HeroSection() {
         seamless user experiences and robust functionality
       </p>
       <a
-        href=""
-        className="uppercase font-semibold text-xs bg-cool-black dark:bg-white dark:text-black text-white rounded-full px-8 py-4 flex items-center justify-center"
+        href="#contact"
+        className="uppercase font-semibold text-xs bg-cool-black dark:bg-white dark:text-black text-white rounded-full px-8 py-4 flex items-center justify-center hover:scale-105 active:scale-100 transition-all duration-300"
       >
-        <span>connect with me</span>
+        <span>schedule a call</span>
       </a>
     </div>
   );
