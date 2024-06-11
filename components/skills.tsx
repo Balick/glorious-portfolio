@@ -83,9 +83,8 @@ export default function Skills() {
         </h1>
         <div className="flex flex-col items-center sm:flex-row gap-8 lg:gap-12">
           {skills.map((skill, index) => (
-            <div className="flex flex-col items-center gap-2">
+            <div key={index} className="flex flex-col items-center gap-2">
               <GaugeCircle
-                key={index}
                 max={100}
                 min={0}
                 value={values[index]}
