@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { inter } from "@/data/constants/fonts";
 import { ToggleButton } from "@/components/toggle-theme";
 import Footer from "@/components/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Balick's portfolio",
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
+      <Analytics />
     </html>
   );
 }
