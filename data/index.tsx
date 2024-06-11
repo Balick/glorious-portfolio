@@ -6,11 +6,12 @@ import {
   Code,
   Braces,
 } from "lucide-react";
+import { FaGithub, FaLinkedinIn, FaX } from "react-icons/fa6";
 
 export const navItems = [
-  { name: "Works", link: "#works" },
-  { name: "Resume", link: "#resume" },
   { name: "Services", link: "#services" },
+  { name: "Skills", link: "#skills" },
+  { name: "Works", link: "#works" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -99,5 +100,20 @@ export const works = [
       "Highly customizable components for crafting modern, personalized websites and applications.",
     className: "md:col-span-1",
     image: "/images/works/work5.png",
+  },
+];
+
+export const socialMedia = [
+  {
+    id: 1,
+    img: <FaLinkedinIn />,
+  },
+  {
+    id: 2,
+    img: <FaGithub />,
+  },
+  {
+    id: 3,
+    img: <FaX />,
   },
 ];

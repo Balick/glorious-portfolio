@@ -26,14 +26,15 @@ export default function HeroSection() {
               "Interactive Experiences",
               "User-Centric Solutions",
             ]}
-            className="dark:text-yellow-700 text-amber-600"
+            className="dark:text-yellow-700 text-amber-600 text-center h-[72px] sm:h-auto"
           />
-          .
+          <span className="hidden md:inline">.</span>
         </span>
       </h1>
       <p className="lg:text-md dark:text-slate-300">
-        Leveraging my expertise in both <b>front-end</b> <br /> and{" "}
-        <b>back-end</b> development, I bring ideas to life, <br /> crafting
+        Leveraging my expertise in both <b>front-end</b>{" "}
+        <br className="hidden md:block" /> and <b>back-end</b> development, I
+        bring ideas to life, <br className="hidden md:block" /> crafting
         seamless user experiences and robust functionality
       </p>
       <a

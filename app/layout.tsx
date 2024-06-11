@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { inter } from "@/data/constants/fonts";
 import { ToggleButton } from "@/components/toggle-theme";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Balick's portfolio",
@@ -16,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <body
         className={`${inter.className} antialiased overflow-x-hidden bg-[#f8f8f8] dark:bg-cool-black relative`}
       >
@@ -28,6 +29,7 @@ export default function RootLayout({
         >
           <ToggleButton />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
