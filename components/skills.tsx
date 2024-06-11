@@ -16,24 +16,25 @@ export default function Skills() {
 
   // Effect to set up the Intersection Observer
   useEffect(() => {
+    const currentSectionRef = sectionRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        // Check if the section is intersecting
         if (entries[0].isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Disconnect observer after the section is visible
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the section is visible
+      { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current); // Start observing the section
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current); // Clean up observer on unmount
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
     };
   }, []);
@@ -62,7 +63,11 @@ export default function Skills() {
   }, [isVisible]);
 
   return (
-    <section id="skills" className="pb-32 flex flex-col gap-12 lg:gap-24 md:flex-row justify-center items-center" ref={sectionRef}>
+    <section
+      id="skills"
+      className="pb-32 flex flex-col gap-12 lg:gap-24 md:flex-row justify-center items-center"
+      ref={sectionRef}
+    >
       <div className="flex flex-col items-center">
         <h1
           className={`${oswald.className} font-semibold text-2xl md:text-4xl flex flex-col text-center pb-10`}
