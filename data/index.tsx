@@ -117,3 +117,41 @@ export const socialMedia = [
     img: <FaX />,
   },
 ];
+
+export const skills = [
+  { name: "frontend", description: "", percentage: 95 },
+  { name: "backend", description: "", percentage: 75 },
+];
+
+export const skillsIcons = [
+  "typescript",
+  "javascript",
+  "jetbrains",
+  "webstorm",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "mongodb",
+  "figma",
+];
