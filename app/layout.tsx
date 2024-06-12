@@ -7,9 +7,9 @@ import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Balick's portfolio",
+  title: "Glorious's Portfolio",
   description:
-    "A simple and beautiful portfolio to present Théo Balick's work and career.",
+    "An elegant and visually appealing portfolio showcasing the work and career of Glorious.",
 };
 
 export default function RootLayout({
